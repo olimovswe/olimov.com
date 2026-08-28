@@ -1,0 +1,23 @@
+/* footer.css - Sahifani zarracha ham surmaydigan ideal kod */
+
+.site-footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-width: 900px;        
+    width: 100%;
+    margin: 10px auto 20px auto; /* Pastki margin ekran burchagiga taqalib qolmasligi uchun */
+    padding: 16px 40px;      
+    border-top: 1px solid #f1f5f9; 
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    font-size: 0.88rem;
+    color: #94a3b8;          
+    font-weight: 500;
+    margin: 0;               
+    padding: 0;
+    text-align: center;      
+    width: 100%;             
+}

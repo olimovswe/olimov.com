@@ -1,0 +1,95 @@
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    max-width: 900px;   
+    width: 100%;
+    margin: 0 auto;      /* Keraksiz tepa va pastki marginlar olib tashlandi */
+    padding: 0 40px;    
+    box-sizing: border-box;
+}
+
+
+.hero-header-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;               
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;      
+    overflow: hidden;
+    flex-shrink: 0;          
+    background-color: #f8fafc;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+.hero-name {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #1e293b;          
+    margin: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.hero-bio {
+    color: #94a3b8;         
+    font-size: 1.45rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;              
+    margin-top: 10px;         
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.9;           
+}
+
+.social-links a img {
+    width: 40px;             
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0.2); 
+    transition: filter 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;             
+    transform: translateY(-3px); 
+}
+
+.social-links a:hover img {
+    filter: brightness(0);   
+}
+
+
+

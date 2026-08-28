@@ -1,0 +1,61 @@
+@import url('https://googleapis.com');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a; 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease; 
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+
+/* base.css - Scrollni mutloq taqiqlovchi global kod */
+
+html, body {
+    height: 100vh;       /* Ekran balandligini 100% qat'iy belgilaydi */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    /* Sahifaning hech qaysi tomonga surilmasligini kafolatlaydi */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Elementlarni tepadan pastgacha teng taqsimlaydi */
+}
+
+/* O'rtadagi bo'shliqni boshqaruvchi asosiy blok */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Hero va Activity qismini ekran markaziga tekislaydi */
+    gap: 20px;               /* Bo'limlar orasidagi xavfsiz parallel masofa */
+}

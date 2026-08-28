@@ -1,0 +1,155 @@
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px 10px 40px; /* Masofa faqat ichki padding orqali beriladi */
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;               /* Faqat gorizontal markazlash */
+    box-sizing: border-box;
+}
+
+
+.brend {
+    font-weight: 700;
+    font-size: 1.50rem;
+    color: #000000;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+/* Oddiy havolalar (Blog, Resources) */
+.nav-link {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 500;
+    padding: 8px 16px; 
+    border-radius: 12px; 
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; 
+}
+
+.nav-link:hover {
+    color: #000000;
+    background-color: #f3f2f2;
+    transform: scale(1.05); /* Sakrab ketmasligi uchun scale barqaror qilindi */
+}
+
+/* ==========================================================================
+   2. DROPDOWN ASOSIY TUGMASI (Hover va Active effektlari bilan)
+   ========================================================================== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    position: relative;
+    font-size: 0.9rem;
+    color: #000000;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 95px;         
+    height: 38px;        
+    border: 1px solid #e0e0e0;
+    outline: none;
+    background-color: #ffffff; 
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: -2px -4px 10px #ffffff, 2px 4px 10px rgba(0, 0, 0, 0.05);
+    /* Sichqoncha ketganda ham silliq qaytishi uchun transition */
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                box-shadow 0.25s ease, 
+                background-color 0.2s ease;
+}
+
+/* Hover: Kursor borganda tugma silliq kattalashadi */
+.dropdown-btn:hover {
+    transform: scale(1.06); 
+    background-color: #f9f9f9; 
+    box-shadow: -4px -6px 12px #ffffff, 4px 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Active: Bosib turilganda tugma biroz ichkariga botadi */
+.dropdown-btn:active {
+    transform: scale(0.96); 
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.08); 
+    background-color: #ececec;
+}
+
+/* ==========================================================================
+   3. DROPDOWN KONTENT OCHILISHI (100% xatosiz va tezkor uslub)
+   ========================================================================== */
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95) translateY(-8px);
+    transform-origin: top right;
+    
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px); 
+    background-color: #ffffff;
+    min-width: 160px;
+    border-radius: 14px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08); 
+    padding: 6px; 
+    z-index: 1000;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+    
+    /* Silliq animatsiya o'tishi */
+    transition: opacity 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                visibility 0.2s;
+}
+
+/* JAVASCRIPT-SIZ MUKAMMAL ISHLOVCHI MEXANIZM:
+   Kursor tugma ustiga kelganda yoki dropdown ichida fokus bo'lganda menyu ochiladi */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0); 
+}
+
+/* Dropdown ichidagi <a> havolalari */
+.dropdown-content a {
+    color: #333333;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    /* Havoladan kursor ketganda silliq joyiga qaytadi */
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+/* Hover: Ichki linklar kursor borganda biroz kattalashib, o'ngga suriladi */
+.dropdown-content a:hover {
+    background-color: #f3f2f2;
+    color: #000000;
+    transform: scale(1.03); 
+    padding-left: 18px;    
+}
+
+/* DIQQAT: Sahifaga srazi o'tishi uchun :active ichidagi scale(0.1) butunlay olib tashlandi! */
+.dropdown-content a:active {
+    background-color: #e2e8f0;
+}
